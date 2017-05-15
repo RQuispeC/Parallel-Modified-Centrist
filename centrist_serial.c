@@ -106,7 +106,7 @@ void writePPM(PPMImage *img) {
     fclose(stdout);
 }
 
-void census_transform(PPMImage *image, PPMImage *image_copy) {
+void census_transform(PPMImage *image, PPMImage *image_copy, float *hist) {
     int i, j, x, y;
     // convert image_copy to grayscale
     for(i = 0; i < image_copy -> y; i++)
@@ -117,6 +117,10 @@ void census_transform(PPMImage *image, PPMImage *image_copy) {
         image_copy -> data[(i * image_copy->x) + j].green = grayscale;
         image_copy -> data[(i * image_copy->x) + j].blue = grayscale;
       }
+
+    //init histogram
+    for(i = 0; i < 256; i++)
+      hist[i] = 0;
 
     //compute centrist image
     image->x-=2, image->y-=2; //remove pixels of the border of image.
@@ -136,10 +140,15 @@ void census_transform(PPMImage *image, PPMImage *image_copy) {
         image -> data[(i * image->x) + j].red = value;
         image -> data[(i * image->x) + j].green = value;
         image -> data[(i * image->x) + j].blue = value;
+        hist[value]++;
       }
+
+    //end histogram
+    for(i = 0; i < 256; i++)
+        hist[i] /= (float)(image->x * image -> y);
 }
 
-void mod_CENTRIST(PPMImage *image, PPMImage *image_copy) {
+void mod_CENTRIST(PPMImage *image, PPMImage *image_copy, float *hist) {
     int i, j, x, y;
     // convert image_copy to grayscale
     for(i = 0; i < image_copy -> y; i++)
@@ -150,6 +159,10 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy) {
         image_copy -> data[(i * image_copy->x) + j].green = grayscale;
         image_copy -> data[(i * image_copy->x) + j].blue = grayscale;
       }
+
+    //init histogram
+    for(i = 0; i < 512; i++)
+            hist[i] = 0;
 
     //compute centrist image
     image->x-=2, image->y-=2; //remove pixels of the border of image.
@@ -172,7 +185,12 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy) {
         image -> data[(i * image->x) + j].red = value;
         image -> data[(i * image->x) + j].green = value;
         image -> data[(i * image->x) + j].blue = value;
+        hist[value]++;
       }
+
+          //end histogram
+    for(i = 0; i < 512; i++)
+        hist[i] /= (float)(image->x * image -> y);
 }
 
 int main(int argc, char *argv[]) {
@@ -187,13 +205,16 @@ int main(int argc, char *argv[]) {
     char *filename = argv[1]; //Recebendo o arquivo!;
     PPMImage *image = readPPM(filename);
     PPMImage *image_output = readPPM(filename);
+    float* hist = (float *)(malloc(sizeof(float)*512)); //change to 256 for normal centrist
 
     t_start = rtclock();
-    mod_CENTRIST(image_output, image);
+    mod_CENTRIST(image_output, image, hist);
     t_end = rtclock();
 
-    writePPM(image_output);
+    //writePPM(image_output);
     //fprintf(stdout, "\n%0.6lfs\n", t_end - t_start);
+    for(i=0; i < 512; i++) printf("%.4f ", hist[i]); puts("");
+
     free(image);
     free(image_output);
 }
