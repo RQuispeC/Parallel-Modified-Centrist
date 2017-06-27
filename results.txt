@@ -1,0 +1,1159 @@
+SERIAL
+IMAGE00
+-bash-4.3$ ./serial images/image0.ppm 
+Serial 0.530494s
+-bash-4.3$ ./serial images/image0.ppm 
+Serial 0.538686s
+-bash-4.3$ ./serial images/image0.ppm 
+Serial 0.538366s
+-bash-4.3$ ./serial images/image0.ppm 
+Serial 0.538540s
+-bash-4.3$ ./serial images/image0.ppm 
+Serial 0.538514s
+IMAGE01
+-bash-4.3$ ./serial images/image1.ppm 
+Serial 1.355894s
+-bash-4.3$ ./serial images/image1.ppm 
+Serial 1.369923s
+-bash-4.3$ ./serial images/image1.ppm 
+Serial 1.362496s
+-bash-4.3$ ./serial images/image1.ppm 
+Serial 1.394732s
+-bash-4.3$ ./serial images/image1.ppm 
+Serial 1.355194s
+IMAGE02
+-bash-4.3$ ./serial images/image2.ppm 
+Serial 2.157302s
+-bash-4.3$ ./serial images/image2.ppm 
+Serial 2.117442s
+-bash-4.3$ ./serial images/image2.ppm 
+Serial 2.103931s
+-bash-4.3$ ./serial images/image2.ppm 
+Serial 2.145881s
+-bash-4.3$ ./serial images/image2.ppm 
+Serial 1.963497s
+IMAGE03
+-bash-4.3$ ./serial images/image3.ppm 
+Serial 3.561441s
+-bash-4.3$ ./serial images/image3.ppm 
+Serial 3.420958s
+-bash-4.3$ ./serial images/image3.ppm 
+Serial 3.500824s
+-bash-4.3$ ./serial images/image3.ppm 
+Serial 3.496206s
+-bash-4.3$ ./serial images/image3.ppm 
+Serial 3.526364s
+IMAGE04
+-bash-4.3$ ./serial images/image4.ppm 
+Serial 6.177450s
+-bash-4.3$ ./serial images/image4.ppm 
+Serial 6.080607s
+-bash-4.3$ ./serial images/image4.ppm 
+Serial 6.182480s
+-bash-4.3$ ./serial images/image4.ppm 
+Serial 6.383276s
+-bash-4.3$ ./serial images/image4.ppm 
+Serial 6.012460s
+
+CUDA
+IMAGE00
+-bash-4.3$ ./paral_cuda images/image0.ppm 
+CudaMalloc 0.053376s
+CopyToDevice  0.003663s
+Kernel  0.020353s
+CopyFromDevice 0.001717s
+Offload 0.058756s
+CudaTotal 0.079108s
+-bash-4.3$ ./paral_cuda images/image0.ppm 
+CudaMalloc 0.045036s
+CopyToDevice  0.003934s
+Kernel  0.021077s
+CopyFromDevice 0.002127s
+Offload 0.051097s
+CudaTotal 0.072174s
+-bash-4.3$ ./paral_cuda images/image0.ppm 
+CudaMalloc 0.064828s
+CopyToDevice  0.003453s
+Kernel  0.020520s
+CopyFromDevice 0.001746s
+Offload 0.070027s
+CudaTotal 0.090547s
+-bash-4.3$ ./paral_cuda images/image0.ppm 
+CudaMalloc 0.037820s
+CopyToDevice  0.006170s
+Kernel  0.019368s
+CopyFromDevice 0.001791s
+Offload 0.045781s
+CudaTotal 0.065149s
+-bash-4.3$ ./paral_cuda images/image0.ppm 
+CudaMalloc 0.052304s
+CopyToDevice  0.003557s
+Kernel  0.020609s
+CopyFromDevice 0.002611s
+Offload 0.058472s
+CudaTotal 0.079081s
+IMAGE01
+-bash-4.3$ ./paral_cuda images/image1.ppm 
+CudaMalloc 0.042504s
+CopyToDevice  0.010135s
+Kernel  0.055302s
+CopyFromDevice 0.006308s
+Offload 0.058947s
+CudaTotal 0.114249s
+-bash-4.3$ ./paral_cuda images/image1.ppm 
+CudaMalloc 0.050125s
+CopyToDevice  0.010020s
+Kernel  0.055260s
+CopyFromDevice 0.005108s
+Offload 0.065253s
+CudaTotal 0.120513s
+-bash-4.3$ ./paral_cuda images/image1.ppm 
+CudaMalloc 0.050075s
+CopyToDevice  0.009998s
+Kernel  0.056339s
+CopyFromDevice 0.005034s
+Offload 0.065107s
+CudaTotal 0.121446s
+-bash-4.3$ ./paral_cuda images/image1.ppm 
+CudaMalloc 0.044720s
+CopyToDevice  0.010370s
+Kernel  0.056891s
+CopyFromDevice 0.005133s
+Offload 0.060223s
+CudaTotal 0.117114s
+-bash-4.3$ ./paral_cuda images/image1.ppm 
+CudaMalloc 0.042998s
+CopyToDevice  0.009922s
+Kernel  0.056798s
+CopyFromDevice 0.005022s
+Offload 0.057942s
+CudaTotal 0.114740s
+IMAGE02
+-bash-4.3$ ./paral_cuda images/image2.ppm 
+CudaMalloc 0.043390s
+CopyToDevice  0.016180s
+Kernel  0.090154s
+CopyFromDevice 0.008393s
+Offload 0.067963s
+CudaTotal 0.158117s
+-bash-4.3$ ./paral_cuda images/image2.ppm 
+CudaMalloc 0.046932s
+CopyToDevice  0.016705s
+Kernel  0.090009s
+CopyFromDevice 0.008513s
+Offload 0.072150s
+CudaTotal 0.162159s
+-bash-4.3$ ./paral_cuda images/image2.ppm 
+CudaMalloc 0.045534s
+CopyToDevice  0.016517s
+Kernel  0.090020s
+CopyFromDevice 0.008175s
+Offload 0.070226s
+CudaTotal 0.160246s
+-bash-4.3$ ./paral_cuda images/image2.ppm 
+CudaMalloc 0.049528s
+CopyToDevice  0.016022s
+Kernel  0.089619s
+CopyFromDevice 0.010386s
+Offload 0.075936s
+CudaTotal 0.165555s
+-bash-4.3$ ./paral_cuda images/image2.ppm 
+CudaMalloc 0.049472s
+CopyToDevice  0.016026s
+Kernel  0.089941s
+CopyFromDevice 0.008270s
+Offload 0.073768s
+CudaTotal 0.163709s
+IMAGE03
+-bash-4.3$ ./paral_cuda images/image3.ppm 
+CudaMalloc 0.054342s
+CopyToDevice  0.031664s
+Kernel  0.128851s
+CopyFromDevice 0.012296s
+Offload 0.098302s
+CudaTotal 0.227153s
+-bash-4.3$ ./paral_cuda images/image3.ppm 
+CudaMalloc 0.041309s
+CopyToDevice  0.025598s
+Kernel  0.128382s
+CopyFromDevice 0.012166s
+Offload 0.079073s
+CudaTotal 0.207455s
+-bash-4.3$ ./paral_cuda images/image3.ppm 
+CudaMalloc 0.060789s
+CopyToDevice  0.030182s
+Kernel  0.127442s
+CopyFromDevice 0.012179s
+Offload 0.103150s
+CudaTotal 0.230592s
+-bash-4.3$ ./paral_cuda images/image3.ppm 
+CudaMalloc 0.046115s
+CopyToDevice  0.024604s
+Kernel  0.129240s
+CopyFromDevice 0.012590s
+Offload 0.083309s
+CudaTotal 0.212548s
+-bash-4.3$ ./paral_cuda images/image3.ppm 
+CudaMalloc 0.062779s
+CopyToDevice  0.026155s
+Kernel  0.129303s
+CopyFromDevice 0.012330s
+Offload 0.101264s
+CudaTotal 0.230567s
+IMAGE04
+-bash-4.3$ ./paral_cuda images/image4.ppm 
+CudaMalloc 0.045414s
+CopyToDevice  0.056837s
+Kernel  0.400631s
+CopyFromDevice 0.028823s
+Offload 0.131074s
+CudaTotal 0.531705s
+-bash-4.3$ ./paral_cuda images/image4.ppm 
+CudaMalloc 0.044800s
+CopyToDevice  0.055518s
+Kernel  0.401139s
+CopyFromDevice 0.033396s
+Offload 0.133714s
+CudaTotal 0.534853s
+-bash-4.3$ ./paral_cuda images/image4.ppm 
+CudaMalloc 0.057490s
+CopyToDevice  0.055378s
+Kernel  0.400373s
+CopyFromDevice 0.032711s
+Offload 0.145579s
+CudaTotal 0.545952s
+-bash-4.3$ ./paral_cuda images/image4.ppm 
+CudaMalloc 0.048710s
+CopyToDevice  0.062909s
+Kernel  0.400341s
+CopyFromDevice 0.034114s
+Offload 0.145733s
+CudaTotal 0.546074s
+-bash-4.3$ ./paral_cuda images/image4.ppm 
+CudaMalloc 0.046050s
+CopyToDevice  0.065237s
+Kernel  0.400804s
+CopyFromDevice 0.032999s
+Offload 0.144286s
+CudaTotal 0.545090s
+
+CLANG NONE
+IMAGE00
+-bash-4.3$ ./paral_clang_none images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5751104 ns
+<rtl><profile> _cl_execute_kernel = 481760 ns
+<rtl><profile> _cl_read_buffer = 7713280 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 10944 ns
+<rtl><profile> _cl_read_buffer = 2624 ns
+<rtl><profile> _cl_offloading_read_only = 5247264 ns
+<rtl><profile> _cl_offloading_read_write = 11532576 ns
+<rtl><profile> _cl_execute_kernel = 11397280 ns
+<rtl><profile> _cl_read_buffer = 27578976 ns
+Total 0.104336s
+-bash-4.3$ ./paral_clang_none images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5813376 ns
+<rtl><profile> _cl_execute_kernel = 489088 ns
+<rtl><profile> _cl_read_buffer = 8621760 ns
+<rtl><profile> _cl_offloading_read_write = 2048 ns
+<rtl><profile> _cl_execute_kernel = 17856 ns
+<rtl><profile> _cl_read_buffer = 2624 ns
+<rtl><profile> _cl_offloading_read_only = 7194400 ns
+<rtl><profile> _cl_offloading_read_write = 15263168 ns
+<rtl><profile> _cl_execute_kernel = 11399552 ns
+<rtl><profile> _cl_read_buffer = 38084896 ns
+Total 0.122474s
+-bash-4.3$ ./paral_clang_none images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5840576 ns
+<rtl><profile> _cl_execute_kernel = 485760 ns
+<rtl><profile> _cl_read_buffer = 8361984 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 17152 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 7047456 ns
+<rtl><profile> _cl_offloading_read_write = 15379328 ns
+<rtl><profile> _cl_execute_kernel = 11396896 ns
+<rtl><profile> _cl_read_buffer = 36371456 ns
+Total 0.120752s
+-bash-4.3$ ./paral_clang_none images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5825408 ns
+<rtl><profile> _cl_execute_kernel = 489184 ns
+<rtl><profile> _cl_read_buffer = 8684320 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15584 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 6588064 ns
+<rtl><profile> _cl_offloading_read_write = 15224928 ns
+<rtl><profile> _cl_execute_kernel = 11407872 ns
+<rtl><profile> _cl_read_buffer = 37368960 ns
+Total 0.123515s
+-bash-4.3$ ./paral_clang_none images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5764128 ns
+<rtl><profile> _cl_execute_kernel = 481504 ns
+<rtl><profile> _cl_read_buffer = 8635200 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 15136 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 7148480 ns
+<rtl><profile> _cl_offloading_read_write = 15778848 ns
+<rtl><profile> _cl_execute_kernel = 11405504 ns
+<rtl><profile> _cl_read_buffer = 36435520 ns
+Total 0.124699s
+IMAGE01
+-bash-4.3$ ./paral_clang_none images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15775424 ns
+<rtl><profile> _cl_execute_kernel = 1451360 ns
+<rtl><profile> _cl_read_buffer = 23671520 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 14784 ns
+<rtl><profile> _cl_read_buffer = 2400 ns
+<rtl><profile> _cl_offloading_read_only = 15485600 ns
+<rtl><profile> _cl_offloading_read_write = 35300544 ns
+<rtl><profile> _cl_execute_kernel = 35755520 ns
+<rtl><profile> _cl_read_buffer = 88081568 ns
+Total 0.269456s
+-bash-4.3$ ./paral_clang_none images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15922592 ns
+<rtl><profile> _cl_execute_kernel = 1455776 ns
+<rtl><profile> _cl_read_buffer = 26027104 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 16288 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 20148832 ns
+<rtl><profile> _cl_offloading_read_write = 40643488 ns
+<rtl><profile> _cl_execute_kernel = 35751584 ns
+<rtl><profile> _cl_read_buffer = 98437728 ns
+Total 0.298157s
+-bash-4.3$ ./paral_clang_none images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17462368 ns
+<rtl><profile> _cl_execute_kernel = 1452320 ns
+<rtl><profile> _cl_read_buffer = 23160928 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14912 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 21333088 ns
+<rtl><profile> _cl_offloading_read_write = 38687584 ns
+<rtl><profile> _cl_execute_kernel = 35754432 ns
+<rtl><profile> _cl_read_buffer = 98209120 ns
+Total 0.290824s
+-bash-4.3$ ./paral_clang_none images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17302272 ns
+<rtl><profile> _cl_execute_kernel = 1451744 ns
+<rtl><profile> _cl_read_buffer = 23204512 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14688 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 20735520 ns
+<rtl><profile> _cl_offloading_read_write = 36897472 ns
+<rtl><profile> _cl_execute_kernel = 35734976 ns
+<rtl><profile> _cl_read_buffer = 96087488 ns
+Total 0.294897s
+-bash-4.3$ ./paral_clang_none images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 16852640 ns
+<rtl><profile> _cl_execute_kernel = 1456256 ns
+<rtl><profile> _cl_read_buffer = 22988192 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16800 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 20772672 ns
+<rtl><profile> _cl_offloading_read_write = 36785120 ns
+<rtl><profile> _cl_execute_kernel = 35749472 ns
+<rtl><profile> _cl_read_buffer = 96186080 ns
+Total 0.287083s
+IMAGE02
+-bash-4.3$ ./paral_clang_none images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 25648160 ns
+<rtl><profile> _cl_execute_kernel = 2376192 ns
+<rtl><profile> _cl_read_buffer = 43218240 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15232 ns
+<rtl><profile> _cl_read_buffer = 2432 ns
+<rtl><profile> _cl_offloading_read_only = 32925248 ns
+<rtl><profile> _cl_offloading_read_write = 62773376 ns
+<rtl><profile> _cl_execute_kernel = 58615872 ns
+<rtl><profile> _cl_read_buffer = 149238432 ns
+Total 0.451297s
+-bash-4.3$ ./paral_clang_none images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 25894656 ns
+<rtl><profile> _cl_execute_kernel = 2378400 ns
+<rtl><profile> _cl_read_buffer = 42806432 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16064 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 34666080 ns
+<rtl><profile> _cl_offloading_read_write = 64825984 ns
+<rtl><profile> _cl_execute_kernel = 58640448 ns
+<rtl><profile> _cl_read_buffer = 148230016 ns
+Total 0.454320s
+-bash-4.3$ ./paral_clang_none images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 26223296 ns
+<rtl><profile> _cl_execute_kernel = 2384128 ns
+<rtl><profile> _cl_read_buffer = 43840960 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 15296 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 34667584 ns
+<rtl><profile> _cl_offloading_read_write = 64283008 ns
+<rtl><profile> _cl_execute_kernel = 58658400 ns
+<rtl><profile> _cl_read_buffer = 152753216 ns
+Total 0.475336s
+-bash-4.3$ ./paral_clang_none images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 27236800 ns
+<rtl><profile> _cl_execute_kernel = 2384416 ns
+<rtl><profile> _cl_read_buffer = 45597664 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 17632 ns
+<rtl><profile> _cl_read_buffer = 2432 ns
+<rtl><profile> _cl_offloading_read_only = 43949952 ns
+<rtl><profile> _cl_offloading_read_write = 58216352 ns
+<rtl><profile> _cl_execute_kernel = 58643008 ns
+<rtl><profile> _cl_read_buffer = 145116128 ns
+Total 0.461794s
+-bash-4.3$ ./paral_clang_none images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 25348256 ns
+<rtl><profile> _cl_execute_kernel = 2371264 ns
+<rtl><profile> _cl_read_buffer = 41810688 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16608 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 34261024 ns
+<rtl><profile> _cl_offloading_read_write = 63713216 ns
+<rtl><profile> _cl_execute_kernel = 58646048 ns
+<rtl><profile> _cl_read_buffer = 150559296 ns
+Total 0.459672s
+IMAGE03
+-bash-4.3$ ./paral_clang_none images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 41912768 ns
+<rtl><profile> _cl_execute_kernel = 3556064 ns
+<rtl><profile> _cl_read_buffer = 54043712 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14784 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 48237344 ns
+<rtl><profile> _cl_offloading_read_write = 76054272 ns
+<rtl><profile> _cl_execute_kernel = 97311936 ns
+<rtl><profile> _cl_read_buffer = 220389792 ns
+Total 0.649352s
+-bash-4.3$ ./paral_clang_none images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 39415072 ns
+<rtl><profile> _cl_execute_kernel = 3561216 ns
+<rtl><profile> _cl_read_buffer = 63562368 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 15360 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 48106496 ns
+<rtl><profile> _cl_offloading_read_write = 90062144 ns
+<rtl><profile> _cl_execute_kernel = 97057376 ns
+<rtl><profile> _cl_read_buffer = 218273600 ns
+Total 0.688424s
+-bash-4.3$ ./paral_clang_none images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 40708928 ns
+<rtl><profile> _cl_execute_kernel = 3544256 ns
+<rtl><profile> _cl_read_buffer = 52904480 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 14112 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 49376800 ns
+<rtl><profile> _cl_offloading_read_write = 76435584 ns
+<rtl><profile> _cl_execute_kernel = 97542976 ns
+<rtl><profile> _cl_read_buffer = 218080448 ns
+Total 0.643710s
+-bash-4.3$ ./paral_clang_none images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 40606112 ns
+<rtl><profile> _cl_execute_kernel = 3561056 ns
+<rtl><profile> _cl_read_buffer = 51491552 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 11808 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 48753152 ns
+<rtl><profile> _cl_offloading_read_write = 77964960 ns
+<rtl><profile> _cl_execute_kernel = 97008832 ns
+<rtl><profile> _cl_read_buffer = 223827456 ns
+Total 0.655515s
+-bash-4.3$ ./paral_clang_none images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 38303424 ns
+<rtl><profile> _cl_execute_kernel = 3561760 ns
+<rtl><profile> _cl_read_buffer = 61414112 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16256 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 49981408 ns
+<rtl><profile> _cl_offloading_read_write = 90657344 ns
+<rtl><profile> _cl_execute_kernel = 97324288 ns
+<rtl><profile> _cl_read_buffer = 217640832 ns
+Total 0.668298s
+IMAGE04
+-bash-4.3$ ./paral_clang_none images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85316928 ns
+<rtl><profile> _cl_execute_kernel = 8307904 ns
+<rtl><profile> _cl_read_buffer = 139882912 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 53600 ns
+<rtl><profile> _cl_read_buffer = 2592 ns
+<rtl><profile> _cl_offloading_read_only = 165532416 ns
+<rtl><profile> _cl_offloading_read_write = 203685312 ns
+<rtl><profile> _cl_execute_kernel = 277431552 ns
+<rtl><profile> _cl_read_buffer = 478805216 ns
+Total 1.549688s
+-bash-4.3$ ./paral_clang_none images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 96594464 ns
+<rtl><profile> _cl_execute_kernel = 8303200 ns
+<rtl><profile> _cl_read_buffer = 184529824 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 69152 ns
+<rtl><profile> _cl_read_buffer = 2592 ns
+<rtl><profile> _cl_offloading_read_only = 105234944 ns
+<rtl><profile> _cl_offloading_read_write = 205391520 ns
+<rtl><profile> _cl_execute_kernel = 277431424 ns
+<rtl><profile> _cl_read_buffer = 470918336 ns
+Total 1.526206s
+-bash-4.3$ ./paral_clang_none images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85794944 ns
+<rtl><profile> _cl_execute_kernel = 8305600 ns
+<rtl><profile> _cl_read_buffer = 160646880 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 21024 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 118987744 ns
+<rtl><profile> _cl_offloading_read_write = 171098048 ns
+<rtl><profile> _cl_execute_kernel = 277628448 ns
+<rtl><profile> _cl_read_buffer = 471621824 ns
+Total 1.467359s
+-bash-4.3$ ./paral_clang_none images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 134433152 ns
+<rtl><profile> _cl_execute_kernel = 8336160 ns
+<rtl><profile> _cl_read_buffer = 193021152 ns
+<rtl><profile> _cl_offloading_read_write = 1952 ns
+<rtl><profile> _cl_execute_kernel = 35904 ns
+<rtl><profile> _cl_read_buffer = 2848 ns
+<rtl><profile> _cl_offloading_read_only = 145399904 ns
+<rtl><profile> _cl_offloading_read_write = 207130304 ns
+<rtl><profile> _cl_execute_kernel = 277515872 ns
+<rtl><profile> _cl_read_buffer = 464800608 ns
+Total 1.600656s
+-bash-4.3$ ./paral_clang_none images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85518016 ns
+<rtl><profile> _cl_execute_kernel = 8287840 ns
+<rtl><profile> _cl_read_buffer = 149179360 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 20256 ns
+<rtl><profile> _cl_read_buffer = 3104 ns
+<rtl><profile> _cl_offloading_read_only = 126171264 ns
+<rtl><profile> _cl_offloading_read_write = 171483008 ns
+<rtl><profile> _cl_execute_kernel = 277472224 ns
+<rtl><profile> _cl_read_buffer = 479736128 ns
+Total 1.485080s
+
+CLANG TILE
+IMAGE00
+-bash-4.3$ ./paral_clang_tile images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5624224 ns
+<rtl><profile> _cl_execute_kernel = 485920 ns
+<rtl><profile> _cl_read_buffer = 7673728 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 11296 ns
+<rtl><profile> _cl_read_buffer = 2592 ns
+<rtl><profile> _cl_offloading_read_only = 5261952 ns
+<rtl><profile> _cl_offloading_read_write = 11812032 ns
+<rtl><profile> _cl_execute_kernel = 11608736 ns
+<rtl><profile> _cl_read_buffer = 27681440 ns
+Total 0.102217s
+-bash-4.3$ ./paral_clang_tile images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5841248 ns
+<rtl><profile> _cl_execute_kernel = 485568 ns
+<rtl><profile> _cl_read_buffer = 8579232 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16352 ns
+<rtl><profile> _cl_read_buffer = 2592 ns
+<rtl><profile> _cl_offloading_read_only = 6543232 ns
+<rtl><profile> _cl_offloading_read_write = 15035616 ns
+<rtl><profile> _cl_execute_kernel = 11402304 ns
+<rtl><profile> _cl_read_buffer = 38252928 ns
+Total 0.124537s
+-bash-4.3$ ./paral_clang_tile images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6450304 ns
+<rtl><profile> _cl_execute_kernel = 482208 ns
+<rtl><profile> _cl_read_buffer = 8126144 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14816 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 6944608 ns
+<rtl><profile> _cl_offloading_read_write = 13588544 ns
+<rtl><profile> _cl_execute_kernel = 11400064 ns
+<rtl><profile> _cl_read_buffer = 37948032 ns
+Total 0.119818s
+-bash-4.3$ ./paral_clang_tile images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6374944 ns
+<rtl><profile> _cl_execute_kernel = 483328 ns
+<rtl><profile> _cl_read_buffer = 8229056 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14112 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 6967296 ns
+<rtl><profile> _cl_offloading_read_write = 13584448 ns
+<rtl><profile> _cl_execute_kernel = 11402752 ns
+<rtl><profile> _cl_read_buffer = 38673504 ns
+Total 0.124478s
+-bash-4.3$ ./paral_clang_tile images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6420096 ns
+<rtl><profile> _cl_execute_kernel = 482752 ns
+<rtl><profile> _cl_read_buffer = 7939168 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 15136 ns
+<rtl><profile> _cl_read_buffer = 2624 ns
+<rtl><profile> _cl_offloading_read_only = 6805952 ns
+<rtl><profile> _cl_offloading_read_write = 13660256 ns
+<rtl><profile> _cl_execute_kernel = 11397088 ns
+<rtl><profile> _cl_read_buffer = 37777536 ns
+Total 0.119525s
+IMAGE01
+-bash-4.3$ ./paral_clang_tile images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15718816 ns
+<rtl><profile> _cl_execute_kernel = 1461888 ns
+<rtl><profile> _cl_read_buffer = 27479776 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 13664 ns
+<rtl><profile> _cl_read_buffer = 2496 ns
+<rtl><profile> _cl_offloading_read_only = 21822464 ns
+<rtl><profile> _cl_offloading_read_write = 42795072 ns
+<rtl><profile> _cl_execute_kernel = 35765120 ns
+<rtl><profile> _cl_read_buffer = 98122240 ns
+Total 0.298482s
+-bash-4.3$ ./paral_clang_tile images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17230528 ns
+<rtl><profile> _cl_execute_kernel = 1459936 ns
+<rtl><profile> _cl_read_buffer = 23661856 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 15136 ns
+<rtl><profile> _cl_read_buffer = 2496 ns
+<rtl><profile> _cl_offloading_read_only = 21508416 ns
+<rtl><profile> _cl_offloading_read_write = 38278848 ns
+<rtl><profile> _cl_execute_kernel = 35768352 ns
+<rtl><profile> _cl_read_buffer = 99201504 ns
+Total 0.291891s
+-bash-4.3$ ./paral_clang_tile images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 16110336 ns
+<rtl><profile> _cl_execute_kernel = 1452928 ns
+<rtl><profile> _cl_read_buffer = 25415232 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 15840 ns
+<rtl><profile> _cl_read_buffer = 2400 ns
+<rtl><profile> _cl_offloading_read_only = 20523392 ns
+<rtl><profile> _cl_offloading_read_write = 41047872 ns
+<rtl><profile> _cl_execute_kernel = 35735264 ns
+<rtl><profile> _cl_read_buffer = 97255360 ns
+Total 0.297716s
+-bash-4.3$ ./paral_clang_tile images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15970048 ns
+<rtl><profile> _cl_execute_kernel = 1454016 ns
+<rtl><profile> _cl_read_buffer = 26640448 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16320 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 20526848 ns
+<rtl><profile> _cl_offloading_read_write = 40660608 ns
+<rtl><profile> _cl_execute_kernel = 35757504 ns
+<rtl><profile> _cl_read_buffer = 97279104 ns
+Total 0.294111s
+-bash-4.3$ ./paral_clang_tile images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17268800 ns
+<rtl><profile> _cl_execute_kernel = 1458560 ns
+<rtl><profile> _cl_read_buffer = 24878944 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 12384 ns
+<rtl><profile> _cl_read_buffer = 3648 ns
+<rtl><profile> _cl_offloading_read_only = 20080896 ns
+<rtl><profile> _cl_offloading_read_write = 36828704 ns
+<rtl><profile> _cl_execute_kernel = 35756800 ns
+<rtl><profile> _cl_read_buffer = 97147040 ns
+Total 0.298796s
+IMAGE02
+-bash-4.3$ ./paral_clang_tile images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 26524096 ns
+<rtl><profile> _cl_execute_kernel = 2381760 ns
+<rtl><profile> _cl_read_buffer = 40957984 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 17088 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 34509600 ns
+<rtl><profile> _cl_offloading_read_write = 63896704 ns
+<rtl><profile> _cl_execute_kernel = 58655168 ns
+<rtl><profile> _cl_read_buffer = 148640736 ns
+Total 0.453735s
+-bash-4.3$ ./paral_clang_tile images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 28124576 ns
+<rtl><profile> _cl_execute_kernel = 2383968 ns
+<rtl><profile> _cl_read_buffer = 36737856 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14912 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 31985408 ns
+<rtl><profile> _cl_offloading_read_write = 55146176 ns
+<rtl><profile> _cl_execute_kernel = 58627456 ns
+<rtl><profile> _cl_read_buffer = 151956928 ns
+Total 0.448212s
+-bash-4.3$ ./paral_clang_tile images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 25862336 ns
+<rtl><profile> _cl_execute_kernel = 2385792 ns
+<rtl><profile> _cl_read_buffer = 41672256 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 16928 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 33776256 ns
+<rtl><profile> _cl_offloading_read_write = 63882848 ns
+<rtl><profile> _cl_execute_kernel = 58659328 ns
+<rtl><profile> _cl_read_buffer = 149160832 ns
+Total 0.453684s
+-bash-4.3$ ./paral_clang_tile images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 28019456 ns
+<rtl><profile> _cl_execute_kernel = 2373536 ns
+<rtl><profile> _cl_read_buffer = 36390528 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 13472 ns
+<rtl><profile> _cl_read_buffer = 3648 ns
+<rtl><profile> _cl_offloading_read_only = 34367552 ns
+<rtl><profile> _cl_offloading_read_write = 56902848 ns
+<rtl><profile> _cl_execute_kernel = 58663168 ns
+<rtl><profile> _cl_read_buffer = 151394464 ns
+Total 0.444355s
+-bash-4.3$ ./paral_clang_tile images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 27542752 ns
+<rtl><profile> _cl_execute_kernel = 2390816 ns
+<rtl><profile> _cl_read_buffer = 36150944 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 13056 ns
+<rtl><profile> _cl_read_buffer = 3808 ns
+<rtl><profile> _cl_offloading_read_only = 34554752 ns
+<rtl><profile> _cl_offloading_read_write = 56852800 ns
+<rtl><profile> _cl_execute_kernel = 58664736 ns
+<rtl><profile> _cl_read_buffer = 152939616 ns
+Total 0.451893s
+IMAGE03
+-bash-4.3$ ./paral_clang_tile images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 37802496 ns
+<rtl><profile> _cl_execute_kernel = 3573984 ns
+<rtl><profile> _cl_read_buffer = 61515648 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 16640 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 50004544 ns
+<rtl><profile> _cl_offloading_read_write = 91075808 ns
+<rtl><profile> _cl_execute_kernel = 97077728 ns
+<rtl><profile> _cl_read_buffer = 220308544 ns
+Total 0.666817s
+-bash-4.3$ ./paral_clang_tile images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 38752512 ns
+<rtl><profile> _cl_execute_kernel = 3562592 ns
+<rtl><profile> _cl_read_buffer = 64557728 ns
+<rtl><profile> _cl_offloading_read_write = 1888 ns
+<rtl><profile> _cl_execute_kernel = 17472 ns
+<rtl><profile> _cl_read_buffer = 2592 ns
+<rtl><profile> _cl_offloading_read_only = 48954528 ns
+<rtl><profile> _cl_offloading_read_write = 91747584 ns
+<rtl><profile> _cl_execute_kernel = 97267232 ns
+<rtl><profile> _cl_read_buffer = 220810688 ns
+Total 0.681479s
+-bash-4.3$ ./paral_clang_tile images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 37848992 ns
+<rtl><profile> _cl_execute_kernel = 3557632 ns
+<rtl><profile> _cl_read_buffer = 61629376 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 17088 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 50021504 ns
+<rtl><profile> _cl_offloading_read_write = 90601856 ns
+<rtl><profile> _cl_execute_kernel = 97219424 ns
+<rtl><profile> _cl_read_buffer = 221714592 ns
+Total 0.680288s
+-bash-4.3$ ./paral_clang_tile images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 41834176 ns
+<rtl><profile> _cl_execute_kernel = 3555328 ns
+<rtl><profile> _cl_read_buffer = 54263904 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14304 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 49989472 ns
+<rtl><profile> _cl_offloading_read_write = 77798912 ns
+<rtl><profile> _cl_execute_kernel = 97134240 ns
+<rtl><profile> _cl_read_buffer = 224175360 ns
+Total 0.654737s
+-bash-4.3$ ./paral_clang_tile images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 39556512 ns
+<rtl><profile> _cl_execute_kernel = 3552480 ns
+<rtl><profile> _cl_read_buffer = 63158048 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16320 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 49825632 ns
+<rtl><profile> _cl_offloading_read_write = 90988544 ns
+<rtl><profile> _cl_execute_kernel = 97382944 ns
+<rtl><profile> _cl_read_buffer = 221711264 ns
+Total 0.684876s
+IMAGE04
+-bash-4.3$ ./paral_clang_tile images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85086816 ns
+<rtl><profile> _cl_execute_kernel = 8314080 ns
+<rtl><profile> _cl_read_buffer = 132710784 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 25664 ns
+<rtl><profile> _cl_read_buffer = 14048 ns
+<rtl><profile> _cl_offloading_read_only = 108134752 ns
+<rtl><profile> _cl_offloading_read_write = 150290720 ns
+<rtl><profile> _cl_execute_kernel = 277260320 ns
+<rtl><profile> _cl_read_buffer = 398766048 ns
+Total 1.331175s
+-bash-4.3$ ./paral_clang_tile images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 84207552 ns
+<rtl><profile> _cl_execute_kernel = 8304352 ns
+<rtl><profile> _cl_read_buffer = 162347360 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 20288 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 117738976 ns
+<rtl><profile> _cl_offloading_read_write = 170319936 ns
+<rtl><profile> _cl_execute_kernel = 277447392 ns
+<rtl><profile> _cl_read_buffer = 466441088 ns
+Total 1.459222s
+-bash-4./paral_clang_tile images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 83937984 ns
+<rtl><profile> _cl_execute_kernel = 8298688 ns
+<rtl><profile> _cl_read_buffer = 133348224 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 19456 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 148085056 ns
+<rtl><profile> _cl_offloading_read_write = 171857728 ns
+<rtl><profile> _cl_execute_kernel = 277257920 ns
+<rtl><profile> _cl_read_buffer = 473602272 ns
+Total 1.465897s
+-bash-4.3$ ./paral_clang_tile images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85905760 ns
+<rtl><profile> _cl_execute_kernel = 8299776 ns
+<rtl><profile> _cl_read_buffer = 176615008 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 50944 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 118632544 ns
+<rtl><profile> _cl_offloading_read_write = 205709120 ns
+<rtl><profile> _cl_execute_kernel = 277463328 ns
+<rtl><profile> _cl_read_buffer = 474834368 ns
+Total 1.520100s
+-bash-4.3$ ./paral_clang_tile images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 83978688 ns
+<rtl><profile> _cl_execute_kernel = 8299776 ns
+<rtl><profile> _cl_read_buffer = 118127232 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 20320 ns
+<rtl><profile> _cl_read_buffer = 2624 ns
+<rtl><profile> _cl_offloading_read_only = 161683328 ns
+<rtl><profile> _cl_offloading_read_write = 170741920 ns
+<rtl><profile> _cl_execute_kernel = 277670784 ns
+<rtl><profile> _cl_read_buffer = 471246144 ns
+Total 1.463501s
+
+CLANG VECTORIZE
+IMAGE00
+-bash-4.3$ ./paral_clang_vect images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6306912 ns
+<rtl><profile> _cl_execute_kernel = 493824 ns
+<rtl><profile> _cl_read_buffer = 8745824 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 45888 ns
+<rtl><profile> _cl_read_buffer = 2816 ns
+<rtl><profile> _cl_offloading_read_only = 7783776 ns
+<rtl><profile> _cl_offloading_read_write = 14210016 ns
+<rtl><profile> _cl_execute_kernel = 11403616 ns
+<rtl><profile> _cl_read_buffer = 37963744 ns
+Total 2.967645s
+-bash-4.3$ ./paral_clang_vect images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 5944544 ns
+<rtl><profile> _cl_execute_kernel = 484928 ns
+<rtl><profile> _cl_read_buffer = 8698912 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 16192 ns
+<rtl><profile> _cl_read_buffer = 2752 ns
+<rtl><profile> _cl_offloading_read_only = 6639584 ns
+<rtl><profile> _cl_offloading_read_write = 15117376 ns
+<rtl><profile> _cl_execute_kernel = 11398080 ns
+<rtl><profile> _cl_read_buffer = 34264544 ns
+Total 0.122077s
+-bash-4.3$ ./paral_clang_vect images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6307328 ns
+<rtl><profile> _cl_execute_kernel = 486016 ns
+<rtl><profile> _cl_read_buffer = 8025760 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15040 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 7294080 ns
+<rtl><profile> _cl_offloading_read_write = 14224416 ns
+<rtl><profile> _cl_execute_kernel = 11403232 ns
+<rtl><profile> _cl_read_buffer = 36815200 ns
+Total 0.121544s
+-bash-4.3$ ./paral_clang_vect images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6041472 ns
+<rtl><profile> _cl_execute_kernel = 489888 ns
+<rtl><profile> _cl_read_buffer = 8869920 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15552 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 6771264 ns
+<rtl><profile> _cl_offloading_read_write = 14860512 ns
+<rtl><profile> _cl_execute_kernel = 11397408 ns
+<rtl><profile> _cl_read_buffer = 38654752 ns
+Total 0.123465s
+-bash-4.3$ ./paral_clang_vect images/image0.ppm 
+<rtl><profile> _cl_offloading_read_write = 6267008 ns
+<rtl><profile> _cl_execute_kernel = 481952 ns
+<rtl><profile> _cl_read_buffer = 8122016 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15168 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 7382336 ns
+<rtl><profile> _cl_offloading_read_write = 14380288 ns
+<rtl><profile> _cl_execute_kernel = 11403840 ns
+<rtl><profile> _cl_read_buffer = 38087776 ns
+Total 0.121796s
+IMAGE01
+-bash-4.3$ ./paral_clang_vect images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15755616 ns
+<rtl><profile> _cl_execute_kernel = 1455584 ns
+<rtl><profile> _cl_read_buffer = 26372672 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 16448 ns
+<rtl><profile> _cl_read_buffer = 2560 ns
+<rtl><profile> _cl_offloading_read_only = 20717056 ns
+<rtl><profile> _cl_offloading_read_write = 41256736 ns
+<rtl><profile> _cl_execute_kernel = 35756384 ns
+<rtl><profile> _cl_read_buffer = 97059296 ns
+Total 0.293385s
+-bash-4.3$ ./paral_clang_vect images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17312608 ns
+<rtl><profile> _cl_execute_kernel = 1449984 ns
+<rtl><profile> _cl_read_buffer = 23856416 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 15168 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 21627360 ns
+<rtl><profile> _cl_offloading_read_write = 38222272 ns
+<rtl><profile> _cl_execute_kernel = 35749824 ns
+<rtl><profile> _cl_read_buffer = 100681440 ns
+Total 0.295614s
+-bash-4.3$ ./paral_clang_vect images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 15635616 ns
+<rtl><profile> _cl_execute_kernel = 1456384 ns
+<rtl><profile> _cl_read_buffer = 25700320 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15168 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 21792032 ns
+<rtl><profile> _cl_offloading_read_write = 42658816 ns
+<rtl><profile> _cl_execute_kernel = 35759456 ns
+<rtl><profile> _cl_read_buffer = 98147136 ns
+Total 0.300132s
+-bash-4.3$ ./paral_clang_vect images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 16881216 ns
+<rtl><profile> _cl_execute_kernel = 1447328 ns
+<rtl><profile> _cl_read_buffer = 23634272 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14816 ns
+<rtl><profile> _cl_read_buffer = 2496 ns
+<rtl><profile> _cl_offloading_read_only = 21809728 ns
+<rtl><profile> _cl_offloading_read_write = 38593280 ns
+<rtl><profile> _cl_execute_kernel = 35744416 ns
+<rtl><profile> _cl_read_buffer = 100005536 ns
+Total 0.295495s
+-bash-4.3$ ./paral_clang_vect images/image1.ppm 
+<rtl><profile> _cl_offloading_read_write = 17297408 ns
+<rtl><profile> _cl_execute_kernel = 1456960 ns
+<rtl><profile> _cl_read_buffer = 23670592 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 13920 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 20684288 ns
+<rtl><profile> _cl_offloading_read_write = 37787200 ns
+<rtl><profile> _cl_execute_kernel = 35749472 ns
+<rtl><profile> _cl_read_buffer = 98790464 ns
+Total 0.290023s
+IMAGE02
+-bash-4.3$ ./paral_clang_vect images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 27451584 ns
+<rtl><profile> _cl_execute_kernel = 2372352 ns
+<rtl><profile> _cl_read_buffer = 37037152 ns
+<rtl><profile> _cl_offloading_read_write = 1760 ns
+<rtl><profile> _cl_execute_kernel = 13952 ns
+<rtl><profile> _cl_read_buffer = 3616 ns
+<rtl><profile> _cl_offloading_read_only = 33591456 ns
+<rtl><profile> _cl_offloading_read_write = 56145088 ns
+<rtl><profile> _cl_execute_kernel = 58658080 ns
+<rtl><profile> _cl_read_buffer = 151514016 ns
+Total 0.441238s
+-bash-4.3$ ./paral_clang_vect images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 27909504 ns
+<rtl><profile> _cl_execute_kernel = 2368224 ns
+<rtl><profile> _cl_read_buffer = 35805536 ns
+<rtl><profile> _cl_offloading_read_write = 1792 ns
+<rtl><profile> _cl_execute_kernel = 16416 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 34593056 ns
+<rtl><profile> _cl_offloading_read_write = 57266400 ns
+<rtl><profile> _cl_execute_kernel = 58649984 ns
+<rtl><profile> _cl_read_buffer = 152166496 ns
+Total 0.445513s
+-bash-4.3$ ./paral_clang_vect images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 28196128 ns
+<rtl><profile> _cl_execute_kernel = 2373024 ns
+<rtl><profile> _cl_read_buffer = 37937536 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 14304 ns
+<rtl><profile> _cl_read_buffer = 2496 ns
+<rtl><profile> _cl_offloading_read_only = 33238496 ns
+<rtl><profile> _cl_offloading_read_write = 56406592 ns
+<rtl><profile> _cl_execute_kernel = 58634848 ns
+<rtl><profile> _cl_read_buffer = 152322848 ns
+Total 0.445254s
+-bash-4.3$ ./paral_clang_vect images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 26345824 ns
+<rtl><profile> _cl_execute_kernel = 2367104 ns
+<rtl><profile> _cl_read_buffer = 42596672 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 15776 ns
+<rtl><profile> _cl_read_buffer = 2528 ns
+<rtl><profile> _cl_offloading_read_only = 34702912 ns
+<rtl><profile> _cl_offloading_read_write = 63994272 ns
+<rtl><profile> _cl_execute_kernel = 58653184 ns
+<rtl><profile> _cl_read_buffer = 151432992 ns
+Total 0.471626s
+-bash-4.3$ ./paral_clang_vect images/image2.ppm 
+<rtl><profile> _cl_offloading_read_write = 28220064 ns
+<rtl><profile> _cl_execute_kernel = 2379552 ns
+<rtl><profile> _cl_read_buffer = 35880448 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14720 ns
+<rtl><profile> _cl_read_buffer = 2496 ns
+<rtl><profile> _cl_offloading_read_only = 34114752 ns
+<rtl><profile> _cl_offloading_read_write = 56614688 ns
+<rtl><profile> _cl_execute_kernel = 58643264 ns
+<rtl><profile> _cl_read_buffer = 151176832 ns
+Total 0.443529s
+IMAGE03
+-bash-4.3$ ./paral_clang_vect images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 40751776 ns
+<rtl><profile> _cl_execute_kernel = 3553888 ns
+<rtl><profile> _cl_read_buffer = 53830944 ns
+<rtl><profile> _cl_offloading_read_write = 1920 ns
+<rtl><profile> _cl_execute_kernel = 15296 ns
+<rtl><profile> _cl_read_buffer = 2912 ns
+<rtl><profile> _cl_offloading_read_only = 49095552 ns
+<rtl><profile> _cl_offloading_read_write = 76914400 ns
+<rtl><profile> _cl_execute_kernel = 96998400 ns
+<rtl><profile> _cl_read_buffer = 224469408 ns
+Total 0.660355s
+-bash-4.3$ ./paral_clang_vect images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 41797248 ns
+<rtl><profile> _cl_execute_kernel = 3549408 ns
+<rtl><profile> _cl_read_buffer = 53288320 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 16032 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 49648832 ns
+<rtl><profile> _cl_offloading_read_write = 77390496 ns
+<rtl><profile> _cl_execute_kernel = 97160384 ns
+<rtl><profile> _cl_read_buffer = 219304256 ns
+Total 0.649256s
+-bash-4.3$ ./paral_clang_vect images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 40711776 ns
+<rtl><profile> _cl_execute_kernel = 3562528 ns
+<rtl><profile> _cl_read_buffer = 48473184 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 9376 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 39160000 ns
+<rtl><profile> _cl_offloading_read_write = 72879712 ns
+<rtl><profile> _cl_execute_kernel = 97193024 ns
+<rtl><profile> _cl_read_buffer = 171854752 ns
+Total 0.557917s
+-bash-4.3$ ./paral_clang_vect images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 41611488 ns
+<rtl><profile> _cl_execute_kernel = 3562176 ns
+<rtl><profile> _cl_read_buffer = 53313568 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14368 ns
+<rtl><profile> _cl_read_buffer = 2656 ns
+<rtl><profile> _cl_offloading_read_only = 49862432 ns
+<rtl><profile> _cl_offloading_read_write = 77495040 ns
+<rtl><profile> _cl_execute_kernel = 97272096 ns
+<rtl><profile> _cl_read_buffer = 220112192 ns
+Total 0.649653s
+-bash-4.3$ ./paral_clang_vect images/image3.ppm 
+<rtl><profile> _cl_offloading_read_write = 38718208 ns
+<rtl><profile> _cl_execute_kernel = 3557472 ns
+<rtl><profile> _cl_read_buffer = 63860064 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 14720 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 47760384 ns
+<rtl><profile> _cl_offloading_read_write = 90766048 ns
+<rtl><profile> _cl_execute_kernel = 97092000 ns
+<rtl><profile> _cl_read_buffer = 216738528 ns
+Total 0.664246s
+IMAGE04
+-bash-4.3$ ./paral_clang_vect images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 86134688 ns
+<rtl><profile> _cl_execute_kernel = 8300608 ns
+<rtl><profile> _cl_read_buffer = 120554016 ns
+<rtl><profile> _cl_offloading_read_write = 1760 ns
+<rtl><profile> _cl_execute_kernel = 19488 ns
+<rtl><profile> _cl_read_buffer = 3776 ns
+<rtl><profile> _cl_offloading_read_only = 160736768 ns
+<rtl><profile> _cl_offloading_read_write = 171112064 ns
+<rtl><profile> _cl_execute_kernel = 277392672 ns
+<rtl><profile> _cl_read_buffer = 529130784 ns
+Total 1.609066s
+-bash-4.3$ ./paral_clang_vect images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 89818304 ns
+<rtl><profile> _cl_execute_kernel = 8294432 ns
+<rtl><profile> _cl_read_buffer = 191090720 ns
+<rtl><profile> _cl_offloading_read_write = 1856 ns
+<rtl><profile> _cl_execute_kernel = 47072 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 102735680 ns
+<rtl><profile> _cl_offloading_read_write = 205739136 ns
+<rtl><profile> _cl_execute_kernel = 277532352 ns
+<rtl><profile> _cl_read_buffer = 477601056 ns
+Total 1.540581s
+-bash-4.3$ ./paral_clang_vect images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 88827328 ns
+<rtl><profile> _cl_execute_kernel = 8302048 ns
+<rtl><profile> _cl_read_buffer = 189881120 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 50880 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 109184064 ns
+<rtl><profile> _cl_offloading_read_write = 205536736 ns
+<rtl><profile> _cl_execute_kernel = 277536256 ns
+<rtl><profile> _cl_read_buffer = 467950464 ns
+Total 1.534826s
+-bash-4.3$ ./paral_clang_vect images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85658912 ns
+<rtl><profile> _cl_execute_kernel = 8283584 ns
+<rtl><profile> _cl_read_buffer = 165471648 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 61184 ns
+<rtl><profile> _cl_read_buffer = 2720 ns
+<rtl><profile> _cl_offloading_read_only = 131819552 ns
+<rtl><profile> _cl_offloading_read_write = 205686560 ns
+<rtl><profile> _cl_execute_kernel = 277440064 ns
+<rtl><profile> _cl_read_buffer = 473860640 ns
+Total 1.537147s
+-bash-4.3$ ./paral_clang_vect images/image4.ppm 
+<rtl><profile> _cl_offloading_read_write = 85403904 ns
+<rtl><profile> _cl_execute_kernel = 8310528 ns
+<rtl><profile> _cl_read_buffer = 141301568 ns
+<rtl><profile> _cl_offloading_read_write = 1824 ns
+<rtl><profile> _cl_execute_kernel = 49312 ns
+<rtl><profile> _cl_read_buffer = 2688 ns
+<rtl><profile> _cl_offloading_read_only = 167413120 ns
+<rtl><profile> _cl_offloading_read_write = 204953632 ns
+<rtl><profile> _cl_execute_kernel = 277587680 ns
+<rtl><profile> _cl_read_buffer = 474799840 ns
+Total 1.531167s

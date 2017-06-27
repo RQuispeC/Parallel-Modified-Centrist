@@ -9,12 +9,12 @@ from sklearn.model_selection import GridSearchCV
 
 def readFeatures(imageName, paralFeatures):
   if paralFeatures:
-    x = subprocess.Popen(['./parallel', imageName], stdout=subprocess.PIPE).communicate()[0]
+    x = subprocess.Popen(['./paral_hist', imageName], stdout=subprocess.PIPE).communicate()[0]
   else:
     x = subprocess.Popen(['./serial_hist', imageName], stdout=subprocess.PIPE).communicate()[0]
   x = np.array(x.split()).astype(np.float)
   return x
-  
+
 def preprocess(filePath, paralFeatures = False):
   trainingClasses = os.listdir(filePath)
   x = []
@@ -27,8 +27,8 @@ def preprocess(filePath, paralFeatures = False):
       x.append(feature)
       y.append(classLabel)
     classLabel += 1
-  x = np.array(x) 
-  y = np.array(y)  
+  x = np.array(x)
+  y = np.array(y)
   return x, y
 
 def faceRecognition(x, y):
@@ -45,7 +45,7 @@ def faceRecognition(x, y):
     y_train, y_test = y[train_index], y[test_index]
 
     #run gridSearch
-    gridSearch = GridSearchCV(SVC(random_state = 1), params, cv = 3)
+    gridSearch = GridSearchCV(SVC(random_state = 1), params, cv = 3, n_jobs = -1)
     gridSearch.fit(x_train, y_train)
 
     #create model with best params
@@ -61,13 +61,17 @@ def faceRecognition(x, y):
 if __name__ == '__main__':
   #set flag for parallel feature extraction
   parser = ap.ArgumentParser()
-  parser.add_argument("-p", "--parallel", help="Use parallel computation")
+  parser.add_argument("-p", "--parallel", default = "false", help="Use parallel computation")
   args = vars(parser.parse_args())
-  
-  paralFeatures = False
-  if args['parallel']:
+
+  if args['parallel'] == "false":
+    paralFeatures = False
+    print "Not using parallel features"
+  else:
     paralFeatures = True
-  
+    print "Using parallel features"
+
+
   filePath = 'orl_faces'
   x, y = preprocess(filePath, paralFeatures)
   print y
@@ -82,4 +86,4 @@ Face Recognition
 	C:  {'kernel': 'rbf', 'C': 1024, 'gamma': 32} nested acc: 0.975
 Mean acc: 0.95250
 
-'''  
+'''

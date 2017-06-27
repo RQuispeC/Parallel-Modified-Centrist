@@ -154,7 +154,7 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy, float *hist) {
     for(i = 0; i < image_copy -> y; i++)
       for(j = 0; j < image_copy -> x; j++)
       {
-        int grayscale = (int)(image_copy -> data[(i * image_copy->x) + j].red*0.299 + image_copy -> data[(i * image_copy->x) + j].green*0.587 + image_copy -> data[(i * image_copy->x) + j].blue*0.114);
+        int grayscale = (image_copy -> data[(i * image_copy->x) + j].red*299 + image_copy -> data[(i * image_copy->x) + j].green*587 + image_copy -> data[(i * image_copy->x) + j].blue*114)/1000;
         image_copy -> data[(i * image_copy->x) + j].red = grayscale;
         image_copy -> data[(i * image_copy->x) + j].green = grayscale;
         image_copy -> data[(i * image_copy->x) + j].blue = grayscale;
@@ -163,7 +163,7 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy, float *hist) {
     //init histogram
     for(i = 0; i < 512; i++)
             hist[i] = 0;
-
+    
     //compute centrist image
     image->x-=2, image->y-=2; //remove pixels of the border of image.
     for(i = 0; i < image -> y; i++)
@@ -173,6 +173,7 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy, float *hist) {
         for(y = i; y <= i + 2; y++)
           for(x = j; x <= j + 2; x++)
             mean += image_copy -> data[(y * image_copy->x) + x].red;
+
         mean /= 9.0;
         int value = 0, k = 8;
         for(y = i; y <= i+2; y++)
@@ -188,7 +189,7 @@ void mod_CENTRIST(PPMImage *image, PPMImage *image_copy, float *hist) {
         hist[value]++;
       }
 
-          //end histogram
+    //end histogram
     for(i = 0; i < 512; i++)
         hist[i] /= (float)(image->x * image -> y);
 }
@@ -200,21 +201,23 @@ int main(int argc, char *argv[]) {
     }
 
     double t_start, t_end;
-    int i;
 
     char *filename = argv[1]; //Recebendo o arquivo!;
     PPMImage *image = readPPM(filename);
     PPMImage *image_output = readPPM(filename);
-    float* hist = (float *)(malloc(sizeof(float)*512)); //change to 256 for normal centrist
-
+    float* hist = (float *)(malloc(sizeof(float)*512));
+    
     t_start = rtclock();
     mod_CENTRIST(image_output, image, hist);
     t_end = rtclock();
 
     //writePPM(image_output);
-    //fprintf(stdout, "\n%0.6lfs\n", t_end - t_start);
-    for(i=0; i < 512; i++) printf("%.4f ", hist[i]); puts("");
+    //for(i=0; i < 512; i++) printf("%.4f ", hist[i]);
+    fprintf(stdout, "Serial %0.6lfs\n", t_end - t_start);
 
     free(image);
     free(image_output);
+
+    return 0;
 }
+
